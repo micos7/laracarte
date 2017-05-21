@@ -1,9 +1,9 @@
 @component('mail::message')
 # Introduction
 
-{{$name}}
-{{$email}}
-{{$msg}}
+{{$msg->name}}
+{{$msg->email}}
+{{$msg->message}}
 
 
 Thanks,<br>
