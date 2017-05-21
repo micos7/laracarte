@@ -18,6 +18,8 @@ class ContactsController extends Controller
         $mailable = new ContactMessageCreated($request->name,$request->email,$request->msg);
         Mail::to('admin@admin.ro')->send($mailable);
 
-        return 'Done!';
+        Flashy('We`ll respond as soon as possible!');
+
+        return redirect()->route('root');
     }
 }
