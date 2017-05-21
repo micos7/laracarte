@@ -5,7 +5,7 @@
 		<div class="row">
         <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
         <h2>Get in touch</h2>
-        <p class="text-muted">If you`re having trouble with this service, please <a href="mailto:your-account@helpful.io" data-helpful="laracarte" data-helpful-modal="on">ask for help</a>.</span></p>
+        <p class="text-muted">If you`re having trouble with this service, please <a href="mailto:{{ config('laracarte.admin_support_email')}} " data-helpful="laracarte" data-helpful-modal="on">ask for help</a>.</span></p>
         <form method="POST" action="{{ route('contact')}} ">
 		            {!! csrf_field() !!}
 

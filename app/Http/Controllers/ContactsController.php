@@ -16,7 +16,7 @@ class ContactsController extends Controller
 
     public function store(ContactRequest $request){
         $mailable = new ContactMessageCreated($request->name,$request->email,$request->msg);
-        Mail::to('admin@admin.ro')->send($mailable);
+        Mail::to( config('laracarte.admin_support_email'))->send($mailable);
 
         Flashy('We`ll respond as soon as possible!');
 
